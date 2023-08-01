@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&family=Poppins:ital,wght@0,300;0,400;1,300&family=Urbanist:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(87, 87, 96);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 3.2px;
+            margin: 70px 14px;
+
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            margin: 80px 0;
+
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+
+            font-size: 2rem;
+            margin: 60px 0;
+
+        }
+
+        .rightSection img {
+            width: 80%;
+            margin: 30px 20;
+
+
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        .text-gray {
+            color: gray;
+
+        }
+
+        .text-gray1 {
+            color: gray;
+
+        }
+
+        .text-gray2 {
+            color: gray;
+
+        }
+
+        #element {
+            color: blueviolet;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 60vh;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 40vh;
+        }
+
+        .fourthSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 200vh;
+        }
+
+        .projectSection {
+            max-width: 40vw;
+            margin: auto;
+            height: 60vh;
+
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .thirdSection h1 {
+            font-size: 1.9rem;
+        }
+
+
+        .secondSection .box {
+            background: white;
+            width: 76vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .thirdSection .box {
+            background: rgb(216, 14, 14);
+            width: 76vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 90px;
+            width: 1px;
+            background-color: white;
+            margin: 0 150px;
+        }
+
+        .image-top {
+            width: 30px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .image-proj {
+            width: 30px;
+            position: relative;
+            align-items: center;
+
+        }
+
+
+        .vertical-title {
+            position: relative;
+            top: 65px;
+            width: 250px;
+        }
+
+        .proj-title {
+            position: relative;
+            align-items: center;
+            width: 550px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 96px;
+            width: 200px;
+            color: rgb(172, 169, 4);
+            font-size: 1rem;
+        }
+
+        .thirdSection .horizontal {
+            height: 30px;
+            width: 1px;
+            background-color: rgb(222, 63, 57);
+            margin: 0 60px;
+        }
+
+        .horizontal-title {
+            position: relative;
+            top: 5px;
+            width: 250px;
+        }
+
+        .horizontal-desc {
+            position: relative;
+            top: 65px;
+            width: 250px;
+            color: rgb(172, 169, 4);
+            font-size: 5rem;
+        }
+
+        h2,
+        p {
+            text-align: center;
+        }
+
+        h3 {
+
+            text-align: center;
+        }
+
+        #git,
+        #play {
+            font-size: 1.5rem;
+            color: burlywood;
+            text-align: center;
+        }
+
+        .containers {
+            width: 90%;
+        }
+
+        .achieve {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-color);
+            display: flex;
+            box-sizing: border-box;
+            min-height: 50vh;
+        }
+
+        main.row {
+            display:inline-block;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-content: center;
+            grid-column-gap: 100px;
+        }
+
+        .col header.title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3rem;
+            padding: 20px 10px 20px 30px;
+            display: inline-block;
+        }
+
+        #present,#present1 {
+            font-size: 1.9rem;
+            color: white;
+        } 
+
+
+       
+        #one {
+            font-size: 1.1rem;
+            color: blueviolet;
+            text-align: center;
+        }
+
+        #clg {
+            font-size: 1.0rem;
+            text-align: center;
+            color: black;
+        }
+
+        #yr {
+            font-size: 1.0rem;
+            text-align: center;
+            color: black;
+        }
+
+        .col .contents {
+            padding: 10px 40px;
+            margin-top: 30px;
+            
+
+        }
+
+        .col .contents .box {
+            display:grid;
+            position:relative;
+            padding: 10px;
+            border: 3px solid rgb(175, 30, 175);
+            background-color: rgb(189, 228, 92);
+            cursor: pointer;
+            transition: all 0.4s;
+            margin-bottom: 40px;
+            box-shadow: 0px 3px 8px 0px var(--text-color);
+            border: 1.5px solid blue;
+        }
+
+
+        .col .contents .box::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 80%;
+            right: calc(100% + 12px);
+            top: 15;
+            background-color: rgb(98, 0, 255);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Nive's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Presentations</a></li>
+                    <li><a href="/">Internship</a></li>
+                    <li><a href="/">Connect Me</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Nivethaa</span>
+                <div>I am a passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+                <img src="me.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">Where I have studied from</span>
+            <h1>Education</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="college.png" alt="">
+                    <div class="vertical-title">
+                        RMK ENGINEERING COLLEGE, KAVARAIPETTAI <br>(2020-24)
+                    </div>
+                    <div class="vertical-desc"><br>
+                        BE COMPUTER SCIENCE<br>
+                        CGPA : 9.45
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="college.png" alt="">
+                    <div class="vertical-title">
+                        ATOMIC ENERGY HIGHER SECONDARY SCHOOL, KALPAKKAM<br>(2019-20)
+                    </div>
+                    <div class="vertical-desc">
+                        12TH STD - BIO-MATHS<br>
+                        % - 86.2
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="college.png" alt="">
+                    <div class="vertical-title">
+                        ATOMIC ENERGY CENTRAL SCHOOL-2, KALPAKKAM<br>(2017-18)
+                    </div>
+                    <div class="vertical-desc"><br>
+                        10TH STD - SCIENCE<br>
+                        % - 85.5
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection">
+            <span class="text-gray1">Skills I developed</span>
+            <h1>Skills</h1>
+
+            <div class="box">
+                <div class="horizontal">
+                    <img class="image-top" src="html.png" alt="">
+                    <div class="horizontal-title">
+                        HTML
+                    </div>
+
+
+                </div>
+                <div class="horizontal">
+                    <img class="image-top" src="css.png" alt="">
+                    <div class="horizontal-title">
+                        CSS
+                    </div>
+
+                </div>
+                <div class="horizontal">
+                    <img class="image-top" src="js.png" alt="">
+                    <div class="horizontal-title">
+                        JS
+                    </div>
+
+                </div>
+                <div class="horizontal">
+                    <img class="image-top" src="c.png" alt="">
+                    <div class="horizontal-title">
+                        C
+                    </div>
+
+                </div>
+                <div class="horizontal">
+                    <img class="image-top" src="python.png" alt="">
+                    <div class="horizontal-title">
+                        PYTHON
+                    </div>
+
+                </div>
+                <div class="horizontal">
+                    <img class="image-top" src="java.png" alt="">
+                    <div class="horizontal-title">
+                        JAVA
+                    </div>
+
+                </div>
+                <div class="horizontal">
+                    <img class="image-top" src="mysql.png" alt="">
+                    <div class="horizontal-title">
+                        MySQL
+                    </div>
+
+                </div>
+                <div class="horizontal">
+                    <img class="image-top" src="django.png" alt="">
+                    <div class="horizontal-title">
+                        Django
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <section class="fourthSection">
+            <span class="text-gray1">Projects I have developed</span>
+            <h1>Projects</h1>
+
+            <section class="projectSection">
+
+                <div class="proj-title">
+                    <h3> FOOD CALORIE COUNTER</h3>
+                    <a href="https://github.com/Nivethaa0310/Food-Calorie-Counter" id="git" target="_blank">Github</a>
+                    <a href="https://drive.google.com/file/d/1_8Bu0Tgh83VKgimGX0G16uRcFFEMbZ7y/view?usp=sharing"
+                        id="play">Demo</a>
+                    <img class="image-pro" src="pr1.jpg" alt=""><br><br>
+                </div>
+
+
+
+
+                <div class="proj-title">
+                    <h3> DJCHAT</h3>
+                    <a href="https://github.com/Nivethaa0310/DjChat-" id="git" target="_blank">Github</a>
+                    <a href="https://drive.google.com/file/d/1POSTG3IZT-pQEXR3khld2BqfITnerGQL/view?usp=sharing"
+                        id="play">Demo</a>
+                    <img class="image-pro" src="pr2.jpg" alt="">
+                </div>
+
+
+
+
+                <div class="proj-title">
+                    <h3> DAILY QUOTE GENERATOR</h3>
+                    <a href="https://github.com/Nivethaa0310/Daily-Quote-Generator" id="git"
+                        target="_blank"></i>Github</a>
+                    <a href="https://drive.google.com/file/d/1pjCArOQzgDju4sxGgF4BqIcW010s_lK6/view?usp=drive_link"
+                        id="play">Demo</a>
+                    <img class="image-pro" src="pr3.jpg" alt="">
+                </div>
+
+            </section>
+
+
+        </section>
+        <hr>
+        <section class="achieve" id="achieve">
+            <div class="container">
+                <h2 class="heading">My <span> Achievements</span></h2>
+                <main class="row">
+                    <section class="col" id="colone">
+
+                        <header class="title">
+                            <h2 id="present">Presentations</h2>
+                        </header>
+                        <div class="contents">
+                            <div class="box">
+                                <h1 id="one"><a href="https://drive.google.com/file/d/176niwADpjGEEm06ysxOCOB1r3LzwTwvk/view?usp=sharing">Pros and Cons of Online Education</a></h1>
+                                <h2 id="clg">IQAC - AMET UNIVERSITY</h2>
+                                <h3 id="yr">July 2021 - Participation Award</h3>
+                            </div>
+                            <div class="box">
+                                <h1 id="one"><a href="https://docs.google.com/presentation/d/1GgkXUGwpw5nxquhsg9S_KPYxRQ7UWIl-/edit?usp=drive_link&ouid=112673720173150721290&rtpof=true&sd=true">Information Security</a></h1>
+                                <h2 id="clg">Computer Society of India - Chennai Chapter</h2>
+                                <h3 id="yr">October 2022 - Awarded as Winner</h3>
+                            </div>
+                            <div class="box">
+                                <h1 id="one"><a href="https://drive.google.com/file/d/1l1eJ3lDEqYMSFFPgUENaFg4yV29AJuso/view?usp=sharing">Automatic Attendence System using Face Recognition</a></h1>
+                                <h2 id="clg">ICCSAI-22</h2>
+                                <h3 id="yr">October 2022 - Participation Award</h3>
+                            </div>
+                            <div class="box">
+                                <h1 id="one"><a href="https://drive.google.com/file/d/176niwADpjGEEm06ysxOCOB1r3LzwTwvk/view?usp=sharing">Digital Forensics using IoT</a></h1>
+                                <h2 id="clg">Coimbatore Institute of Technology</h2>
+                                <h3 id="yr">January 2023 - Participation Award</h3>
+                            </div>
+                            <div class="box">
+                                <h1 id="one"><a href="https://drive.google.com/file/d/1ZZ7Zc_xNgoHKkrtp7zHY5k-5SKuMz0Ew/view?usp=sharing">Digital Forensics using IoT - Poster</a></h1>
+                                <h2 id="clg">Adhyamaan College of Engineering</h2>
+                                <h3 id="yr">February 2023 - First Prize</h3>
+                            </div>
+                        </div>
+                        </section>
+                        <section class="col" id="coltwo">
+                            <header class="title">
+                                <h2 id="present1">Internship</h2>
+                            </header>
+                            <div class="contents">
+                                <div class="box">
+                                    <h2 id="one">Web Development</h2>
+                                    <h3 id="clg">Oasis Infobyte</h3>
+                                    <h4 id="yr">March 2022 - April 2022</h4>
+                                </div>
+
+                                <div class="box">
+                                    <h2 id="one">Backend using XAMPP</h2>
+                                    <h3 id="clg">IGCAR , Kalpakkam</h3>
+                                    <h4 id="yr">July 2022 - August 2022</h4>
+                                </div> 
+
+                                <div class="box">
+                                    <h2 id="one">Data Science Intern</h2>
+                                    <h3 id="clg">Exposys DataLabs</h3>
+                                    <h4 id="yr">January 2023 - February 2023</h4>
+                                </div>
+
+                                <div class="box">
+                                    <h2 id="one">Python Programming</h2>
+                                    <h3 id="clg">SYNC INTERN'S</h3>
+                                    <h4 id="yr">July 2023 - August 2023</h4>
+                                </div>
+
+                            </div>
+                        </section>
+
+                </main>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Computer Science Engineer', 'Data Science enthust', 'Python lover'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
